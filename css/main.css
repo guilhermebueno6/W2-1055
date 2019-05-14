@@ -35,3 +35,16 @@ justify-content: space-evenly;
   max-width: 375px;
   align-self: center;
 }
+
+/*inline SVG css styles*/
+
+#badge{
+  cursor: pointer;
+  width: 30%;
+
+}
+.st0:hover {opacity:1;fill:#FFFFFF;}
+
+#badge:hover {
+  width: 33%;
+}

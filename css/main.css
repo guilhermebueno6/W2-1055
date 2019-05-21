@@ -48,3 +48,11 @@ justify-content: space-evenly;
 #badge:hover {
   width: 33%;
 }
+.selected {
+  color: blue !important;
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: 20px;
+  
+
+}

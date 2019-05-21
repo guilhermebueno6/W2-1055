@@ -8,10 +8,14 @@ console.log('fired!');
 
 //let stores the reference to element as  a variable (in memory)
 
-let svgGraphic = document.querySelector("#badgeSVG"),
-mainHeadline = document.querySelector(".main-headline"),
+
+let mainHeadline = document.querySelector(".main-headline"),
 subHead = document.querySelector("#raster-vector h3"),
-swapTextButton = document.querySelector(".switch-type");
+swapTextButton = document.querySelector(".switch-type"),
+allImages = document.querySelectorAll("#image-container img"),
+objectButton = document.querySelector(".container button");
+
+
 
 
 
@@ -20,7 +24,9 @@ swapTextButton = document.querySelector(".switch-type");
 function logMyId() {
   console.log(this.id);
 
-  this.style.opacity = 0.5;
+  // do toggling class
+
+  this.classList.toggle("opacity")
 
 }
 
@@ -31,9 +37,20 @@ function swapText(){
 
 }
 
+function logTheSVG(){
+  console.log(this.previousElementSibling.id);
+}
 
-svgGraphic.addEventListener("click",logMyId);
-swapTextButton.addEventListener("click", swapText)
 
+
+
+swapTextButton.addEventListener("click", swapText);
+
+allImages.forEach(item => {
+  item.addEventListener("click", logMyId);
+});
+
+// the button beside the svg object objectButton
+objectButton.addEventListener("click",logTheSVG)
 
 })();
